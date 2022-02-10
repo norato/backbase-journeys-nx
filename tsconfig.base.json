@@ -23,6 +23,9 @@
       ],
       "@journey-nx/custom-exchange-rates-api": [
         "libs/custom-exchange-rates-api/src/index.ts"
+      ],
+      "@journey-nx/exchange-rates-journey": [
+        "libs/exchange-rates-journey/src/index.ts"
       ]
     }
   },

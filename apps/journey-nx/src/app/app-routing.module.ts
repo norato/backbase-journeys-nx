@@ -16,13 +16,13 @@ const routes: Routes = [
         (m) => m.CustomContactManagerJourneyBundleModule
       ),
   },
-  // {
-  //   path: 'rates',
-  //   loadChildren: () =>
-  //     import('./exchange-rates/exchange-rates-journey-bundle.module').then(
-  //       (m) => m.ExchangeRatesJourneyBundleModule
-  //     ),
-  // },
+  {
+    path: 'rates',
+    loadChildren: () =>
+      import('./custom-journeys/exchange-rates-journey-bundle.module').then(
+        (m) => m.ExchangeRatesJourneyBundleModule
+      ),
+  },
   {
     path: '**',
     redirectTo: 'accounts',

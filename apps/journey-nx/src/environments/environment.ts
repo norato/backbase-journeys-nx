@@ -3,8 +3,7 @@ import { ContactsHttpServiceMocksProvider } from '@backbase/data-ang/contact-man
 import { FinancialInstitutionManagerClientHttpServiceMocksProvider } from '@backbase/data-ang/financial-institution-manager';
 import { TransactionClientHttpServiceMocksProvider } from '@backbase/data-ang/transactions';
 import { createMocksInterceptor } from '@backbase/foundation-ang/data-http';
-
-// import { ExchangeHttpServiceMocksProvider } from 'exchange-rates-api';
+import { ExchangeHttpServiceMocksProvider } from '@journey-nx/custom-exchange-rates-api';
 
 export const mockProviders = [
   createMocksInterceptor(),
@@ -12,8 +11,7 @@ export const mockProviders = [
   TransactionClientHttpServiceMocksProvider,
   ContactsHttpServiceMocksProvider,
   FinancialInstitutionManagerClientHttpServiceMocksProvider,
-
-  // ExchangeHttpServiceMocksProvider,
+  ExchangeHttpServiceMocksProvider,
 ];
 
 export const environment = {

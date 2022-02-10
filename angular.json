@@ -4,6 +4,7 @@
     "custom-accounts-transactions-journey-bundle": "libs/custom-accounts-transactions-journey-bundle",
     "custom-contact-manager-journey-bundle": "libs/custom-contact-manager-journey-bundle",
     "custom-exchange-rates-api": "libs/custom-exchange-rates-api",
+    "exchange-rates-journey": "libs/exchange-rates-journey",
     "journey-nx": "apps/journey-nx",
     "journey-nx-e2e": "apps/journey-nx-e2e"
   }

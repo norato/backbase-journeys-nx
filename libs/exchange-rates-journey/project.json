@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/exchange-rates-journey",
+  "sourceRoot": "libs/exchange-rates-journey/src",
+  "prefix": "journey-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/exchange-rates-journey"],
+      "options": {
+        "jestConfig": "libs/exchange-rates-journey/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/exchange-rates-journey/src/**/*.ts",
+          "libs/exchange-rates-journey/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
