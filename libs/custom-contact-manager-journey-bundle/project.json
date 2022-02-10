@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/custom-contact-manager-journey-bundle",
+  "sourceRoot": "libs/custom-contact-manager-journey-bundle/src",
+  "prefix": "journey-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/custom-contact-manager-journey-bundle"],
+      "options": {
+        "jestConfig": "libs/custom-contact-manager-journey-bundle/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/custom-contact-manager-journey-bundle/src/**/*.ts",
+          "libs/custom-contact-manager-journey-bundle/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "custom-contact-manager-journey-bundle": "libs/custom-contact-manager-journey-bundle",
     "journey-nx": "apps/journey-nx",
     "journey-nx-e2e": "apps/journey-nx-e2e"
   }
