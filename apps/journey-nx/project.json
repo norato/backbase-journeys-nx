@@ -18,7 +18,10 @@
           "apps/journey-nx/src/favicon.ico",
           "apps/journey-nx/src/assets"
         ],
-        "styles": ["apps/journey-nx/src/styles.scss",  "node_modules/@backbase/backbase-theme/scss/main.scss" ],
+        "styles": [
+          "apps/journey-nx/src/styles.scss",
+          "node_modules/@backbase/backbase-theme/scss/main.scss"
+        ],
         "scripts": []
       },
       "configurations": {

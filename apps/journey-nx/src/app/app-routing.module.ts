@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // {
-  //   path: 'accounts',
-  //   loadChildren: () =>
-  //     import('../bundle/accounts-transactions-journey-bundle.module').then(
-  //       (m) => m.AccountsTransactionsJourneyBundleModule
-  //     ),
-  // },
+  {
+    path: 'accounts',
+    loadChildren: () =>
+      import('@journey-nx/custom-accounts-transactions-journey-bundle').then(
+        (m) => m.CustomAccountsTransactionsJourneyBundleModule
+      ),
+  },
   {
     path: 'contacts',
     loadChildren: () =>
@@ -25,7 +25,7 @@ const routes: Routes = [
   // },
   {
     path: '**',
-    redirectTo: 'contacts',
+    redirectTo: 'accounts',
   },
 ];
 

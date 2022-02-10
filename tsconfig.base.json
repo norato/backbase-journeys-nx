@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@journey-nx/custom-accounts-transactions-journey-bundle": [
+        "libs/custom-accounts-transactions-journey-bundle/src/index.ts"
+      ],
       "@journey-nx/custom-contact-manager-journey-bundle": [
         "libs/custom-contact-manager-journey-bundle/src/index.ts"
       ]

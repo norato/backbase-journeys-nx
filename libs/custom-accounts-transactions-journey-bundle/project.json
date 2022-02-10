@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/custom-accounts-transactions-journey-bundle",
+  "sourceRoot": "libs/custom-accounts-transactions-journey-bundle/src",
+  "prefix": "journey-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/custom-accounts-transactions-journey-bundle"],
+      "options": {
+        "jestConfig": "libs/custom-accounts-transactions-journey-bundle/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/custom-accounts-transactions-journey-bundle/src/**/*.ts",
+          "libs/custom-accounts-transactions-journey-bundle/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
