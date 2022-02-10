@@ -1,0 +1,28 @@
+{
+  "root": "apps/journey-nx-e2e",
+  "sourceRoot": "apps/journey-nx-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/journey-nx-e2e/cypress.json",
+        "devServerTarget": "journey-nx:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "journey-nx:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/journey-nx-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["journey-nx"]
+}

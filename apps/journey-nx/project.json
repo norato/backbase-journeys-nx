@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/journey-nx",
+  "sourceRoot": "apps/journey-nx/src",
+  "prefix": "journey-nx",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/journey-nx",
+        "index": "apps/journey-nx/src/index.html",
+        "main": "apps/journey-nx/src/main.ts",
+        "polyfills": "apps/journey-nx/src/polyfills.ts",
+        "tsConfig": "apps/journey-nx/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/journey-nx/src/favicon.ico",
+          "apps/journey-nx/src/assets"
+        ],
+        "styles": ["apps/journey-nx/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/journey-nx/src/environments/environment.ts",
+              "with": "apps/journey-nx/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "journey-nx:build:production"
+        },
+        "development": {
+          "browserTarget": "journey-nx:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "journey-nx:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/journey-nx/src/**/*.ts",
+          "apps/journey-nx/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/journey-nx"],
+      "options": {
+        "jestConfig": "apps/journey-nx/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

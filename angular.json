@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "journey-nx": "apps/journey-nx",
+    "journey-nx-e2e": "apps/journey-nx-e2e"
+  }
+}
