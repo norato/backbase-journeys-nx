@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/custom-exchange-rates-api",
+  "sourceRoot": "libs/custom-exchange-rates-api/src",
+  "prefix": "journey-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/custom-exchange-rates-api"],
+      "options": {
+        "jestConfig": "libs/custom-exchange-rates-api/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/custom-exchange-rates-api/src/**/*.ts",
+          "libs/custom-exchange-rates-api/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

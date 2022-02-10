@@ -20,6 +20,9 @@
       ],
       "@journey-nx/custom-contact-manager-journey-bundle": [
         "libs/custom-contact-manager-journey-bundle/src/index.ts"
+      ],
+      "@journey-nx/custom-exchange-rates-api": [
+        "libs/custom-exchange-rates-api/src/index.ts"
       ]
     }
   },
