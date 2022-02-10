@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { TemplateRegistry } from '@backbase/foundation-ang/core';
 
 import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [...environment.mockProviders, TemplateRegistry],
   bootstrap: [AppComponent],
 })

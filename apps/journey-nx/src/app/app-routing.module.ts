@@ -9,13 +9,13 @@ const routes: Routes = [
   //       (m) => m.AccountsTransactionsJourneyBundleModule
   //     ),
   // },
-  // {
-  //   path: 'contacts',
-  //   loadChildren: () =>
-  //     import('../bundle/contact-manager-journey-bundle.module').then(
-  //       (m) => m.ContactManagerJourneyBundleModule
-  //     ),
-  // },
+  {
+    path: 'contacts',
+    loadChildren: () =>
+      import('@journey-nx/custom-contact-manager-journey-bundle').then(
+        (m) => m.CustomContactManagerJourneyBundleModule
+      ),
+  },
   // {
   //   path: 'rates',
   //   loadChildren: () =>
@@ -23,10 +23,10 @@ const routes: Routes = [
   //       (m) => m.ExchangeRatesJourneyBundleModule
   //     ),
   // },
-  // {
-  //   path: '**',
-  //   redirectTo: 'accounts',
-  // },
+  {
+    path: '**',
+    redirectTo: 'contacts',
+  },
 ];
 
 @NgModule({

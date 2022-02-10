@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ContactManagerJourneyModule } from '@backbase/contact-manager-journey-ang';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, ContactManagerJourneyModule.forRoot()],
 })
 export class CustomContactManagerJourneyBundleModule {}
